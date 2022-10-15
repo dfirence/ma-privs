@@ -1,0 +1,4244 @@
+[
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1001.001",
+      "name": "Junk Data",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1001.002",
+      "name": "Steganography",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1001.003",
+      "name": "Protocol Impersonation",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "system",
+      "tid": "T1003.002",
+      "name": "Security Account Manager",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access|windows-registry-key-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1003.003",
+      "name": "NTDS",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "system",
+      "tid": "T1003.004",
+      "name": "LSA Secrets",
+      "tactic": "credential-access",
+      "context": "command-execution|windows-registry-key-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "system",
+      "tid": "T1003.005",
+      "name": "Cached Domain Credentials",
+      "tactic": "credential-access",
+      "context": "command-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1003.006",
+      "name": "DCSync",
+      "tactic": "credential-access",
+      "context": "active-directory-object-access|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1011.001",
+      "name": "Exfiltration Over Bluetooth",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1016.001",
+      "name": "Internet Connection Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "remotedesktopusers|user",
+      "tid": "T1021.001",
+      "name": "Remote Desktop Protocol",
+      "tactic": "lateral-movement",
+      "context": "logon-session-creation|network-connection-creation|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1021.002",
+      "name": "SMB/Windows Admin Shares",
+      "tactic": "lateral-movement",
+      "context": "command-execution|logon-session-creation|network-connection-creation|network-share-access|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1021.003",
+      "name": "Distributed Component Object Model",
+      "tactic": "lateral-movement",
+      "context": "module-load|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1021.005",
+      "name": "VNC",
+      "tactic": "lateral-movement",
+      "context": "logon-session-creation|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1021.006",
+      "name": "Windows Remote Management",
+      "tactic": "lateral-movement",
+      "context": "command-execution|logon-session-creation|network-connection-creation|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1027.001",
+      "name": "Binary Padding",
+      "tactic": "defense-evasion",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1027.003",
+      "name": "Steganography",
+      "tactic": "defense-evasion",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1027.004",
+      "name": "Compile After Delivery",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|file-metadata|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1036.001",
+      "name": "Invalid Code Signature",
+      "tactic": "defense-evasion",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1036.002",
+      "name": "Right-to-Left Override",
+      "tactic": "defense-evasion",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1036.003",
+      "name": "Rename System Utilities",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-metadata|file-modification|process-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1036.004",
+      "name": "Masquerade Task or Service",
+      "tactic": "defense-evasion",
+      "context": "command-execution|scheduled-job-metadata|scheduled-job-modification|service-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1036.007",
+      "name": "Double File Extension",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1037.001",
+      "name": "Logon Script (Windows)",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|windows-registry-key-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1037.001",
+      "name": "Logon Script (Windows)",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|process-creation|windows-registry-key-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1037.003",
+      "name": "Network Logon Script",
+      "tactic": "persistence",
+      "context": "active-directory-object-modification|command-execution|file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1037.003",
+      "name": "Network Logon Script",
+      "tactic": "privilege-escalation",
+      "context": "active-directory-object-modification|command-execution|file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1048.001",
+      "name": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1048.002",
+      "name": "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1052.001",
+      "name": "Exfiltration over USB",
+      "tactic": "exfiltration",
+      "context": "command-execution|drive-creation|file-access|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.001",
+      "name": "Dynamic-link Library Injection",
+      "tactic": "defense-evasion",
+      "context": "module-load|os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.001",
+      "name": "Dynamic-link Library Injection",
+      "tactic": "privilege-escalation",
+      "context": "module-load|os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.002",
+      "name": "Portable Executable Injection",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.002",
+      "name": "Portable Executable Injection",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.003",
+      "name": "Thread Execution Hijacking",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.003",
+      "name": "Thread Execution Hijacking",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055.004",
+      "name": "Asynchronous Procedure Call",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055.004",
+      "name": "Asynchronous Procedure Call",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055.005",
+      "name": "Thread Local Storage",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055.005",
+      "name": "Thread Local Storage",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055.011",
+      "name": "Extra Window Memory Injection",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055.011",
+      "name": "Extra Window Memory Injection",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.012",
+      "name": "Process Hollowing",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.012",
+      "name": "Process Hollowing",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1055.013",
+      "name": "Process Doppelgänging",
+      "tactic": "defense-evasion",
+      "context": "file-metadata|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1055.013",
+      "name": "Process Doppelgänging",
+      "tactic": "privilege-escalation",
+      "context": "file-metadata|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.015",
+      "name": "ListPlanting",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1055.015",
+      "name": "ListPlanting",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|root|system|user",
+      "tid": "T1056.001",
+      "name": "Keylogging",
+      "tactic": "collection",
+      "context": "driver-load|os-api-execution|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|root|system|user",
+      "tid": "T1056.001",
+      "name": "Keylogging",
+      "tactic": "credential-access",
+      "context": "driver-load|os-api-execution|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1056.002",
+      "name": "GUI Input Capture",
+      "tactic": "collection",
+      "context": "command-execution|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1056.002",
+      "name": "GUI Input Capture",
+      "tactic": "credential-access",
+      "context": "command-execution|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1056.003",
+      "name": "Web Portal Capture",
+      "tactic": "collection",
+      "context": "file-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1056.003",
+      "name": "Web Portal Capture",
+      "tactic": "credential-access",
+      "context": "file-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1056.004",
+      "name": "Credential API Hooking",
+      "tactic": "collection",
+      "context": "os-api-execution|process-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1056.004",
+      "name": "Credential API Hooking",
+      "tactic": "credential-access",
+      "context": "os-api-execution|process-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1059.003",
+      "name": "Windows Command Shell",
+      "tactic": "execution",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1059.005",
+      "name": "Visual Basic",
+      "tactic": "execution",
+      "context": "command-execution|module-load|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|root",
+      "tid": "T1059.006",
+      "name": "Python",
+      "tactic": "execution",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1059.007",
+      "name": "JavaScript",
+      "tactic": "execution",
+      "context": "command-execution|module-load|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1069.001",
+      "name": "Local Groups",
+      "tactic": "discovery",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1069.002",
+      "name": "Domain Groups",
+      "tactic": "discovery",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1070.005",
+      "name": "Network Share Connection Removal",
+      "tactic": "defense-evasion",
+      "context": "command-execution|network-traffic-content|process-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "root|system|user",
+      "tid": "T1070.006",
+      "name": "Timestomp",
+      "tactic": "defense-evasion",
+      "context": "file-metadata|file-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1071.001",
+      "name": "Web Protocols",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1071.002",
+      "name": "File Transfer Protocols",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1071.003",
+      "name": "Mail Protocols",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1071.004",
+      "name": "DNS",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1074.002",
+      "name": "Remote Data Staging",
+      "tactic": "collection",
+      "context": "command-execution|file-access|file-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.001",
+      "name": "Default Accounts",
+      "tactic": "defense-evasion",
+      "context": "logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.001",
+      "name": "Default Accounts",
+      "tactic": "persistence",
+      "context": "logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.001",
+      "name": "Default Accounts",
+      "tactic": "privilege-escalation",
+      "context": "logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.001",
+      "name": "Default Accounts",
+      "tactic": "initial-access",
+      "context": "logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.003",
+      "name": "Local Accounts",
+      "tactic": "defense-evasion",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.003",
+      "name": "Local Accounts",
+      "tactic": "persistence",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.003",
+      "name": "Local Accounts",
+      "tactic": "privilege-escalation",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1078.003",
+      "name": "Local Accounts",
+      "tactic": "initial-access",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1087.001",
+      "name": "Local Account",
+      "tactic": "discovery",
+      "context": "command-execution|file-access|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1087.002",
+      "name": "Domain Account",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1087.003",
+      "name": "Email Account",
+      "tactic": "discovery",
+      "context": "command-execution|process-creation|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1090.001",
+      "name": "Internal Proxy",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1090.002",
+      "name": "External Proxy",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1090.003",
+      "name": "Multi-hop Proxy",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1090.004",
+      "name": "Domain Fronting",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1102.001",
+      "name": "Dead Drop Resolver",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1102.002",
+      "name": "Bidirectional Communication",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1102.003",
+      "name": "One-Way Communication",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1110.003",
+      "name": "Password Spraying",
+      "tactic": "credential-access",
+      "context": "application-log-content|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1110.004",
+      "name": "Credential Stuffing",
+      "tactic": "credential-access",
+      "context": "application-log-content|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1114.001",
+      "name": "Local Email Collection",
+      "tactic": "collection",
+      "context": "command-execution|file-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1114.002",
+      "name": "Remote Email Collection",
+      "tactic": "collection",
+      "context": "command-execution|logon-session-creation|network-connection-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1114.003",
+      "name": "Email Forwarding Rule",
+      "tactic": "collection",
+      "context": "application-log-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1127.001",
+      "name": "MSBuild",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1132.001",
+      "name": "Standard Encoding",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1132.002",
+      "name": "Non-Standard Encoding",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1134.001",
+      "name": "Token Impersonation/Theft",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1134.001",
+      "name": "Token Impersonation/Theft",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1134.002",
+      "name": "Create Process with Token",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1134.002",
+      "name": "Create Process with Token",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1134.003",
+      "name": "Make and Impersonate Token",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1134.003",
+      "name": "Make and Impersonate Token",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1134.005",
+      "name": "SID-History Injection",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-modification|os-api-execution|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1134.005",
+      "name": "SID-History Injection",
+      "tactic": "privilege-escalation",
+      "context": "active-directory-object-modification|os-api-execution|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1136.001",
+      "name": "Local Account",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|user-account-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1136.002",
+      "name": "Domain Account",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|user-account-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1137.001",
+      "name": "Office Template Macros",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1137.002",
+      "name": "Office Test",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification|module-load|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1137.003",
+      "name": "Outlook Forms",
+      "tactic": "persistence",
+      "context": "application-log-content|command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1137.004",
+      "name": "Outlook Home Page",
+      "tactic": "persistence",
+      "context": "application-log-content|command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1137.005",
+      "name": "Outlook Rules",
+      "tactic": "persistence",
+      "context": "application-log-content|command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1137.006",
+      "name": "Add-ins",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1204.001",
+      "name": "Malicious Link",
+      "tactic": "execution",
+      "context": "file-creation|network-connection-creation|network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1205.001",
+      "name": "Port Knocking",
+      "tactic": "defense-evasion",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1205.001",
+      "name": "Port Knocking",
+      "tactic": "persistence",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1205.001",
+      "name": "Port Knocking",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1213.002",
+      "name": "Sharepoint",
+      "tactic": "collection",
+      "context": "application-log-content|logon-session-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1218.001",
+      "name": "Compiled HTML File",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1218.002",
+      "name": "Control Panel",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|module-load|os-api-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1218.003",
+      "name": "CMSTP",
+      "tactic": "defense-evasion",
+      "context": "command-execution|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1218.004",
+      "name": "InstallUtil",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1218.005",
+      "name": "Mshta",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1218.008",
+      "name": "Odbcconf",
+      "tactic": "defense-evasion",
+      "context": "command-execution|module-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1218.009",
+      "name": "Regsvcs/Regasm",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1218.010",
+      "name": "Regsvr32",
+      "tactic": "defense-evasion",
+      "context": "command-execution|module-load|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1222.001",
+      "name": "Windows File and Directory Permissions Modification",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-modification|command-execution|file-metadata|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1484.001",
+      "name": "Group Policy Modification",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-creation|active-directory-object-deletion|active-directory-object-modification|command-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1484.001",
+      "name": "Group Policy Modification",
+      "tactic": "privilege-escalation",
+      "context": "active-directory-object-creation|active-directory-object-deletion|active-directory-object-modification|command-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1484.002",
+      "name": "Domain Trust Modification",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-creation|active-directory-object-modification|command-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1484.002",
+      "name": "Domain Trust Modification",
+      "tactic": "privilege-escalation",
+      "context": "active-directory-object-creation|active-directory-object-modification|command-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1491.001",
+      "name": "Internal Defacement",
+      "tactic": "impact",
+      "context": "application-log-content|file-creation|file-modification|network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1491.002",
+      "name": "External Defacement",
+      "tactic": "impact",
+      "context": "application-log-content|file-creation|file-modification|network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497.001",
+      "name": "System Checks",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497.001",
+      "name": "System Checks",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497.002",
+      "name": "User Activity Based Checks",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497.002",
+      "name": "User Activity Based Checks",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497.003",
+      "name": "Time Based Evasion",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497.003",
+      "name": "Time Based Evasion",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1498.002",
+      "name": "Reflection Amplification",
+      "tactic": "impact",
+      "context": "host-status|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1499.003",
+      "name": "Application Exhaustion Flood",
+      "tactic": "impact",
+      "context": "application-log-content|host-status|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1499.004",
+      "name": "Application or System Exploitation",
+      "tactic": "impact",
+      "context": "application-log-content|host-status|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|root",
+      "tid": "T1505.001",
+      "name": "SQL Stored Procedures",
+      "tactic": "persistence",
+      "context": "application-log-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator|root",
+      "tid": "T1505.002",
+      "name": "Transport Agent",
+      "tactic": "persistence",
+      "context": "application-log-content|file-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|user",
+      "tid": "T1505.003",
+      "name": "Web Shell",
+      "tactic": "persistence",
+      "context": "application-log-content|file-creation|file-modification|network-traffic-content|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1505.004",
+      "name": "IIS Components",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1542.001",
+      "name": "System Firmware",
+      "tactic": "persistence",
+      "context": "firmware-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1542.001",
+      "name": "System Firmware",
+      "tactic": "defense-evasion",
+      "context": "firmware-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system",
+      "tid": "T1542.002",
+      "name": "Component Firmware",
+      "tactic": "persistence",
+      "context": "driver-metadata|firmware-modification|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "system",
+      "tid": "T1542.002",
+      "name": "Component Firmware",
+      "tactic": "defense-evasion",
+      "context": "driver-metadata|firmware-modification|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1542.003",
+      "name": "Bootkit",
+      "tactic": "persistence",
+      "context": "drive-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1542.003",
+      "name": "Bootkit",
+      "tactic": "defense-evasion",
+      "context": "drive-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1546.008",
+      "name": "Accessibility Features",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-creation|file-modification|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1546.008",
+      "name": "Accessibility Features",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.009",
+      "name": "AppCert DLLs",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|os-api-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.009",
+      "name": "AppCert DLLs",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|os-api-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1546.010",
+      "name": "AppInit DLLs",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|os-api-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1546.010",
+      "name": "AppInit DLLs",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|os-api-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1546.011",
+      "name": "Application Shimming",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-modification|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1546.011",
+      "name": "Application Shimming",
+      "tactic": "persistence",
+      "context": "command-execution|file-modification|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.012",
+      "name": "Image File Execution Options Injection",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.012",
+      "name": "Image File Execution Options Injection",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1546.013",
+      "name": "PowerShell Profile",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1546.013",
+      "name": "PowerShell Profile",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1546.015",
+      "name": "Component Object Model Hijacking",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1546.015",
+      "name": "Component Object Model Hijacking",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1547.005",
+      "name": "Security Support Provider",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1547.005",
+      "name": "Security Support Provider",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1547.009",
+      "name": "Shortcut Modification",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1547.009",
+      "name": "Shortcut Modification",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1547.012",
+      "name": "Print Processors",
+      "tactic": "persistence",
+      "context": "driver-load|file-creation|module-load|os-api-execution|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1547.012",
+      "name": "Print Processors",
+      "tactic": "privilege-escalation",
+      "context": "driver-load|file-creation|module-load|os-api-execution|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1547.014",
+      "name": "Active Setup",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1547.014",
+      "name": "Active Setup",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1550.002",
+      "name": "Pass the Hash",
+      "tactic": "defense-evasion",
+      "context": "active-directory-credential-request|logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1550.002",
+      "name": "Pass the Hash",
+      "tactic": "lateral-movement",
+      "context": "active-directory-credential-request|logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1550.003",
+      "name": "Pass the Ticket",
+      "tactic": "defense-evasion",
+      "context": "active-directory-credential-request|logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1550.003",
+      "name": "Pass the Ticket",
+      "tactic": "lateral-movement",
+      "context": "active-directory-credential-request|logon-session-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1552.001",
+      "name": "Credentials In Files",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1552.002",
+      "name": "Credentials in Registry",
+      "tactic": "credential-access",
+      "context": "command-execution|process-creation|windows-registry-key-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1552.004",
+      "name": "Private Keys",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1552.006",
+      "name": "Group Policy Preferences",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1553.002",
+      "name": "Code Signing",
+      "tactic": "defense-evasion",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1553.004",
+      "name": "Install Root Certificate",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1555.003",
+      "name": "Credentials from Web Browsers",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access|os-api-execution|process-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1555.005",
+      "name": "Password Managers",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access|os-api-execution|process-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1556.001",
+      "name": "Domain Controller Authentication",
+      "tactic": "credential-access",
+      "context": "file-modification|logon-session-creation|os-api-execution|process-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1556.001",
+      "name": "Domain Controller Authentication",
+      "tactic": "defense-evasion",
+      "context": "file-modification|logon-session-creation|os-api-execution|process-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1556.001",
+      "name": "Domain Controller Authentication",
+      "tactic": "persistence",
+      "context": "file-modification|logon-session-creation|os-api-execution|process-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1556.002",
+      "name": "Password Filter DLL",
+      "tactic": "credential-access",
+      "context": "file-creation|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1556.002",
+      "name": "Password Filter DLL",
+      "tactic": "defense-evasion",
+      "context": "file-creation|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1556.002",
+      "name": "Password Filter DLL",
+      "tactic": "persistence",
+      "context": "file-creation|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1556.005",
+      "name": "Reversible Encryption",
+      "tactic": "credential-access",
+      "context": "active-directory-object-modification|command-execution|script-execution|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1556.005",
+      "name": "Reversible Encryption",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-modification|command-execution|script-execution|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1556.005",
+      "name": "Reversible Encryption",
+      "tactic": "persistence",
+      "context": "active-directory-object-modification|command-execution|script-execution|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1557.001",
+      "name": "LLMNR/NBT-NS Poisoning and SMB Relay",
+      "tactic": "credential-access",
+      "context": "network-traffic-content|network-traffic-flow|service-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1557.001",
+      "name": "LLMNR/NBT-NS Poisoning and SMB Relay",
+      "tactic": "collection",
+      "context": "network-traffic-content|network-traffic-flow|service-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1557.002",
+      "name": "ARP Cache Poisoning",
+      "tactic": "credential-access",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1557.002",
+      "name": "ARP Cache Poisoning",
+      "tactic": "collection",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1558.001",
+      "name": "Golden Ticket",
+      "tactic": "credential-access",
+      "context": "active-directory-credential-request|logon-session-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1558.002",
+      "name": "Silver Ticket",
+      "tactic": "credential-access",
+      "context": "logon-session-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1558.003",
+      "name": "Kerberoasting",
+      "tactic": "credential-access",
+      "context": "active-directory-credential-request"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1558.004",
+      "name": "AS-REP Roasting",
+      "tactic": "credential-access",
+      "context": "active-directory-credential-request"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1559.001",
+      "name": "Component Object Model",
+      "tactic": "execution",
+      "context": "module-load|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1559.002",
+      "name": "Dynamic Data Exchange",
+      "tactic": "execution",
+      "context": "module-load|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1560.002",
+      "name": "Archive via Library",
+      "tactic": "collection",
+      "context": "file-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1560.003",
+      "name": "Archive via Custom Method",
+      "tactic": "collection",
+      "context": "file-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|root|administrator|user",
+      "tid": "T1561.001",
+      "name": "Disk Content Wipe",
+      "tactic": "impact",
+      "context": "command-execution|drive-access|drive-modification|driver-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|root|system",
+      "tid": "T1561.002",
+      "name": "Disk Structure Wipe",
+      "tactic": "impact",
+      "context": "command-execution|drive-access|drive-modification|driver-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1562.001",
+      "name": "Disable or Modify Tools",
+      "tactic": "defense-evasion",
+      "context": "command-execution|host-status|process-termination|service-metadata|windows-registry-key-deletion|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1562.002",
+      "name": "Disable Windows Event Logging",
+      "tactic": "defense-evasion",
+      "context": "application-log-content|command-execution|host-status|process-creation|script-execution|windows-registry-key-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1562.004",
+      "name": "Disable or Modify System Firewall",
+      "tactic": "defense-evasion",
+      "context": "command-execution|firewall-disable|firewall-rule-modification|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1562.006",
+      "name": "Indicator Blocking",
+      "tactic": "defense-evasion",
+      "context": "command-execution|host-status|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1562.009",
+      "name": "Safe Mode Boot",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system",
+      "tid": "T1563.002",
+      "name": "RDP Hijacking",
+      "tactic": "lateral-movement",
+      "context": "command-execution|logon-session-creation|network-traffic-content|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1564.001",
+      "name": "Hidden Files and Directories",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|file-metadata|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1564.003",
+      "name": "Hidden Window",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-modification|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1564.004",
+      "name": "NTFS File Attributes",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-metadata|file-modification|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1564.005",
+      "name": "Hidden File System",
+      "tactic": "defense-evasion",
+      "context": "file-modification|firmware-modification|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1564.006",
+      "name": "Run Virtual Instance",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|image-metadata|process-creation|service-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1564.007",
+      "name": "VBA Stomping",
+      "tactic": "defense-evasion",
+      "context": "file-metadata|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1564.010",
+      "name": "Process Argument Spoofing",
+      "tactic": "defense-evasion",
+      "context": "process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|root|system",
+      "tid": "T1565.003",
+      "name": "Runtime Data Manipulation",
+      "tactic": "impact",
+      "context": "file-creation|file-deletion|file-metadata|file-modification|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1566.001",
+      "name": "Spearphishing Attachment",
+      "tactic": "initial-access",
+      "context": "application-log-content|file-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1566.003",
+      "name": "Spearphishing via Service",
+      "tactic": "initial-access",
+      "context": "application-log-content|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1567.001",
+      "name": "Exfiltration to Code Repository",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1567.002",
+      "name": "Exfiltration to Cloud Storage",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1568.001",
+      "name": "Fast Flux DNS",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1568.002",
+      "name": "Domain Generation Algorithms",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1568.003",
+      "name": "DNS Calculation",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1569.002",
+      "name": "Service Execution",
+      "tactic": "execution",
+      "context": "command-execution|process-creation|service-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1573.001",
+      "name": "Symmetric Cryptography",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1573.002",
+      "name": "Asymmetric Cryptography",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.001",
+      "name": "DLL Search Order Hijacking",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|module-load"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.001",
+      "name": "DLL Search Order Hijacking",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|module-load"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.001",
+      "name": "DLL Search Order Hijacking",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|module-load"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.005",
+      "name": "Executable Installer File Permissions Weakness",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|module-load|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.005",
+      "name": "Executable Installer File Permissions Weakness",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|module-load|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.005",
+      "name": "Executable Installer File Permissions Weakness",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|module-load|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user|system",
+      "tid": "T1574.008",
+      "name": "Path Interception by Search Order Hijacking",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user|system",
+      "tid": "T1574.008",
+      "name": "Path Interception by Search Order Hijacking",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user|system",
+      "tid": "T1574.008",
+      "name": "Path Interception by Search Order Hijacking",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.009",
+      "name": "Path Interception by Unquoted Path",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.009",
+      "name": "Path Interception by Unquoted Path",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.009",
+      "name": "Path Interception by Unquoted Path",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.010",
+      "name": "Services File Permissions Weakness",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.010",
+      "name": "Services File Permissions Weakness",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.010",
+      "name": "Services File Permissions Weakness",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1574.012",
+      "name": "COR_PROFILER",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1574.012",
+      "name": "COR_PROFILER",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1574.012",
+      "name": "COR_PROFILER",
+      "tactic": "defense-evasion",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.013",
+      "name": "KernelCallbackTable",
+      "tactic": "persistence",
+      "context": "os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.013",
+      "name": "KernelCallbackTable",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.013",
+      "name": "KernelCallbackTable",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1606.001",
+      "name": "Web Cookies",
+      "tactic": "credential-access",
+      "context": "logon-session-creation|web-credential-creation|web-credential-usage"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1606.002",
+      "name": "SAML Tokens",
+      "tactic": "credential-access",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication|web-credential-creation|web-credential-usage"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1614.001",
+      "name": "System Language Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation|windows-registry-key-access"
+    }
+  ],
+  [
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1001",
+      "name": "Data Obfuscation",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|root",
+      "tid": "T1003",
+      "name": "OS Credential Dumping",
+      "tactic": "credential-access",
+      "context": "active-directory-object-access|command-execution|file-access|network-traffic-content|network-traffic-flow|os-api-execution|process-access|process-creation|windows-registry-key-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1003.001",
+      "name": "LSASS Memory",
+      "tactic": "credential-access",
+      "context": "command-execution|os-api-execution|process-access|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1005",
+      "name": "Data from Local System",
+      "tactic": "collection",
+      "context": "command-execution|file-access|os-api-execution|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1006",
+      "name": "Direct Volume Access",
+      "tactic": "defense-evasion",
+      "context": "command-execution|drive-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1007",
+      "name": "System Service Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1008",
+      "name": "Fallback Channels",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1010",
+      "name": "Application Window Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1011",
+      "name": "Exfiltration Over Other Network Medium",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1012",
+      "name": "Query Registry",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation|windows-registry-key-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1014",
+      "name": "Rootkit",
+      "tactic": "defense-evasion",
+      "context": "drive-modification|file-modification|firmware-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1016",
+      "name": "System Network Configuration Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1018",
+      "name": "Remote System Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|file-access|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1020",
+      "name": "Automated Exfiltration",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1021",
+      "name": "Remote Services",
+      "tactic": "lateral-movement",
+      "context": "command-execution|logon-session-creation|module-load|network-connection-creation|network-share-access|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1025",
+      "name": "Data from Removable Media",
+      "tactic": "collection",
+      "context": "command-execution|file-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1027",
+      "name": "Obfuscated Files or Information",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|file-metadata|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1027.002",
+      "name": "Software Packing",
+      "tactic": "defense-evasion",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1027.005",
+      "name": "Indicator Removal from Tools",
+      "tactic": "defense-evasion",
+      "context": "application-log-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1027.006",
+      "name": "HTML Smuggling",
+      "tactic": "defense-evasion",
+      "context": "file-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1029",
+      "name": "Scheduled Transfer",
+      "tactic": "exfiltration",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1030",
+      "name": "Data Transfer Size Limits",
+      "tactic": "exfiltration",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1033",
+      "name": "System Owner/User Discovery",
+      "tactic": "discovery",
+      "context": "active-directory-object-access|command-execution|file-access|network-traffic-content|network-traffic-flow|os-api-execution|process-access|process-creation|windows-registry-key-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1036",
+      "name": "Masquerading",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-metadata|file-modification|image-metadata|process-metadata|scheduled-job-metadata|scheduled-job-modification|service-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1036.005",
+      "name": "Match Legitimate Name or Location",
+      "tactic": "defense-evasion",
+      "context": "file-metadata|image-metadata|process-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1037",
+      "name": "Boot or Logon Initialization Scripts",
+      "tactic": "persistence",
+      "context": "active-directory-object-modification|command-execution|file-creation|file-modification|process-creation|windows-registry-key-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1037",
+      "name": "Boot or Logon Initialization Scripts",
+      "tactic": "privilege-escalation",
+      "context": "active-directory-object-modification|command-execution|file-creation|file-modification|process-creation|windows-registry-key-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1039",
+      "name": "Data from Network Shared Drive",
+      "tactic": "collection",
+      "context": "command-execution|file-access|network-share-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1040",
+      "name": "Network Sniffing",
+      "tactic": "credential-access",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1040",
+      "name": "Network Sniffing",
+      "tactic": "discovery",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1041",
+      "name": "Exfiltration Over C2 Channel",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1046",
+      "name": "Network Service Discovery",
+      "tactic": "discovery",
+      "context": "cloud-service-enumeration|command-execution|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1047",
+      "name": "Windows Management Instrumentation",
+      "tactic": "execution",
+      "context": "command-execution|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1048",
+      "name": "Exfiltration Over Alternative Protocol",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1048.003",
+      "name": "Exfiltration Over Unencrypted Non-C2 Protocol",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1049",
+      "name": "System Network Connections Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1052",
+      "name": "Exfiltration Over Physical Medium",
+      "tactic": "exfiltration",
+      "context": "command-execution|drive-creation|file-access|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1053",
+      "name": "Scheduled Task/Job",
+      "tactic": "execution",
+      "context": "command-execution|container-creation|file-creation|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1053",
+      "name": "Scheduled Task/Job",
+      "tactic": "persistence",
+      "context": "command-execution|container-creation|file-creation|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1053",
+      "name": "Scheduled Task/Job",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|container-creation|file-creation|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1053.002",
+      "name": "At",
+      "tactic": "execution",
+      "context": "command-execution|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1053.002",
+      "name": "At",
+      "tactic": "persistence",
+      "context": "command-execution|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1053.002",
+      "name": "At",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1053.005",
+      "name": "Scheduled Task",
+      "tactic": "execution",
+      "context": "command-execution|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1053.005",
+      "name": "Scheduled Task",
+      "tactic": "persistence",
+      "context": "command-execution|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1053.005",
+      "name": "Scheduled Task",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-modification|process-creation|scheduled-job-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055",
+      "name": "Process Injection",
+      "tactic": "defense-evasion",
+      "context": "file-metadata|file-modification|module-load|os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1055",
+      "name": "Process Injection",
+      "tactic": "privilege-escalation",
+      "context": "file-metadata|file-modification|module-load|os-api-execution|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|root|user",
+      "tid": "T1056",
+      "name": "Input Capture",
+      "tactic": "collection",
+      "context": "driver-load|file-modification|os-api-execution|process-creation|process-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|root|user",
+      "tid": "T1056",
+      "name": "Input Capture",
+      "tactic": "credential-access",
+      "context": "driver-load|file-modification|os-api-execution|process-creation|process-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1057",
+      "name": "Process Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1059",
+      "name": "Command and Scripting Interpreter",
+      "tactic": "execution",
+      "context": "command-execution|module-load|process-creation|process-metadata|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1059.001",
+      "name": "PowerShell",
+      "tactic": "execution",
+      "context": "command-execution|module-load|process-creation|process-metadata|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1068",
+      "name": "Exploitation for Privilege Escalation",
+      "tactic": "privilege-escalation",
+      "context": "driver-load"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1069",
+      "name": "Permission Groups Discovery",
+      "tactic": "discovery",
+      "context": "application-log-content|command-execution|group-enumeration|group-metadata|pod-metadata|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1070",
+      "name": "Indicator Removal on Host",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-deletion|file-metadata|file-modification|network-traffic-content|os-api-execution|process-creation|user-account-authentication|windows-registry-key-deletion|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1070.001",
+      "name": "Clear Windows Event Logs",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-deletion|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1070.003",
+      "name": "Clear Command History",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-deletion|file-modification|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1070.004",
+      "name": "File Deletion",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-deletion"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1071",
+      "name": "Application Layer Protocol",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1072",
+      "name": "Software Deployment Tools",
+      "tactic": "execution",
+      "context": "application-log-content|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1072",
+      "name": "Software Deployment Tools",
+      "tactic": "lateral-movement",
+      "context": "application-log-content|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1074",
+      "name": "Data Staged",
+      "tactic": "collection",
+      "context": "command-execution|file-access|file-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1074.001",
+      "name": "Local Data Staging",
+      "tactic": "collection",
+      "context": "command-execution|file-access|file-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078",
+      "name": "Valid Accounts",
+      "tactic": "defense-evasion",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078",
+      "name": "Valid Accounts",
+      "tactic": "persistence",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078",
+      "name": "Valid Accounts",
+      "tactic": "privilege-escalation",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078",
+      "name": "Valid Accounts",
+      "tactic": "initial-access",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078.002",
+      "name": "Domain Accounts",
+      "tactic": "defense-evasion",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078.002",
+      "name": "Domain Accounts",
+      "tactic": "persistence",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078.002",
+      "name": "Domain Accounts",
+      "tactic": "privilege-escalation",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1078.002",
+      "name": "Domain Accounts",
+      "tactic": "initial-access",
+      "context": "logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1080",
+      "name": "Taint Shared Content",
+      "tactic": "lateral-movement",
+      "context": "file-creation|file-modification|network-share-access|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1082",
+      "name": "System Information Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|instance-metadata|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1083",
+      "name": "File and Directory Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1087",
+      "name": "Account Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|file-access|process-creation|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1090",
+      "name": "Proxy",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1091",
+      "name": "Replication Through Removable Media",
+      "tactic": "lateral-movement",
+      "context": "drive-creation|file-access|file-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1091",
+      "name": "Replication Through Removable Media",
+      "tactic": "initial-access",
+      "context": "drive-creation|file-access|file-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1092",
+      "name": "Communication Through Removable Media",
+      "tactic": "command-and-control",
+      "context": "drive-access|drive-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1095",
+      "name": "Non-Application Layer Protocol",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1098",
+      "name": "Account Manipulation",
+      "tactic": "persistence",
+      "context": "active-directory-object-modification|command-execution|file-modification|group-modification|process-creation|user-account-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1098.002",
+      "name": "Additional Email Delegate Permissions",
+      "tactic": "persistence",
+      "context": "application-log-content|group-modification|user-account-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1098.005",
+      "name": "Device Registration",
+      "tactic": "persistence",
+      "context": "active-directory-object-creation|application-log-content|user-account-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1102",
+      "name": "Web Service",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1104",
+      "name": "Multi-Stage Channels",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1105",
+      "name": "Ingress Tool Transfer",
+      "tactic": "command-and-control",
+      "context": "file-creation|network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1106",
+      "name": "Native API",
+      "tactic": "execution",
+      "context": "module-load|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1110",
+      "name": "Brute Force",
+      "tactic": "credential-access",
+      "context": "application-log-content|command-execution|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1110.001",
+      "name": "Password Guessing",
+      "tactic": "credential-access",
+      "context": "application-log-content|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1110.002",
+      "name": "Password Cracking",
+      "tactic": "credential-access",
+      "context": "application-log-content|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1111",
+      "name": "Multi-Factor Authentication Interception",
+      "tactic": "credential-access",
+      "context": "driver-load|os-api-execution|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1112",
+      "name": "Modify Registry",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution|process-creation|windows-registry-key-creation|windows-registry-key-deletion|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1113",
+      "name": "Screen Capture",
+      "tactic": "collection",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1114",
+      "name": "Email Collection",
+      "tactic": "collection",
+      "context": "application-log-content|command-execution|file-access|logon-session-creation|network-connection-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1115",
+      "name": "Clipboard Data",
+      "tactic": "collection",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1119",
+      "name": "Automated Collection",
+      "tactic": "collection",
+      "context": "command-execution|file-access|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1120",
+      "name": "Peripheral Device Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1123",
+      "name": "Audio Capture",
+      "tactic": "collection",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1124",
+      "name": "System Time Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1125",
+      "name": "Video Capture",
+      "tactic": "collection",
+      "context": "command-execution|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1127",
+      "name": "Trusted Developer Utilities Proxy Execution",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1129",
+      "name": "Shared Modules",
+      "tactic": "execution",
+      "context": "module-load|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1132",
+      "name": "Data Encoding",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1133",
+      "name": "External Remote Services",
+      "tactic": "persistence",
+      "context": "application-log-content|logon-session-metadata|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1133",
+      "name": "External Remote Services",
+      "tactic": "initial-access",
+      "context": "application-log-content|logon-session-metadata|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1134",
+      "name": "Access Token Manipulation",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-modification|command-execution|os-api-execution|process-creation|process-metadata|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1134",
+      "name": "Access Token Manipulation",
+      "tactic": "privilege-escalation",
+      "context": "active-directory-object-modification|command-execution|os-api-execution|process-creation|process-metadata|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1134.004",
+      "name": "Parent PID Spoofing",
+      "tactic": "defense-evasion",
+      "context": "os-api-execution|process-creation|process-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1134.004",
+      "name": "Parent PID Spoofing",
+      "tactic": "privilege-escalation",
+      "context": "os-api-execution|process-creation|process-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1135",
+      "name": "Network Share Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1136",
+      "name": "Create Account",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|user-account-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1137",
+      "name": "Office Application Startup",
+      "tactic": "persistence",
+      "context": "application-log-content|command-execution|file-creation|file-modification|module-load|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1140",
+      "name": "Deobfuscate/Decode Files or Information",
+      "tactic": "defense-evasion",
+      "context": "file-modification|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1176",
+      "name": "Browser Extensions",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|network-connection-creation|process-creation|windows-registry-key-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1185",
+      "name": "Browser Session Hijacking",
+      "tactic": "collection",
+      "context": "logon-session-creation|process-access|process-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1187",
+      "name": "Forced Authentication",
+      "tactic": "credential-access",
+      "context": "file-access|file-creation|file-modification|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1189",
+      "name": "Drive-by Compromise",
+      "tactic": "initial-access",
+      "context": "application-log-content|file-creation|network-connection-creation|network-traffic-content|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1190",
+      "name": "Exploit Public-Facing Application",
+      "tactic": "initial-access",
+      "context": "application-log-content|network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1195",
+      "name": "Supply Chain Compromise",
+      "tactic": "initial-access",
+      "context": "file-metadata|host-status"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1195.001",
+      "name": "Compromise Software Dependencies and Development Tools",
+      "tactic": "initial-access",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1195.002",
+      "name": "Compromise Software Supply Chain",
+      "tactic": "initial-access",
+      "context": "file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1195.003",
+      "name": "Compromise Hardware Supply Chain",
+      "tactic": "initial-access",
+      "context": "host-status"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1197",
+      "name": "BITS Jobs",
+      "tactic": "defense-evasion",
+      "context": "command-execution|network-connection-creation|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1197",
+      "name": "BITS Jobs",
+      "tactic": "persistence",
+      "context": "command-execution|network-connection-creation|process-creation|service-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1199",
+      "name": "Trusted Relationship",
+      "tactic": "initial-access",
+      "context": "application-log-content|logon-session-creation|logon-session-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1200",
+      "name": "Hardware Additions",
+      "tactic": "initial-access",
+      "context": "application-log-content|drive-creation|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1201",
+      "name": "Password Policy Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|process-creation|user-account-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1202",
+      "name": "Indirect Command Execution",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1203",
+      "name": "Exploitation for Client Execution",
+      "tactic": "execution",
+      "context": "application-log-content|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1204",
+      "name": "User Execution",
+      "tactic": "execution",
+      "context": "application-log-content|command-execution|container-creation|container-start|file-creation|image-creation|instance-creation|instance-start|network-connection-creation|network-traffic-content|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1204.002",
+      "name": "Malicious File",
+      "tactic": "execution",
+      "context": "file-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1205",
+      "name": "Traffic Signaling",
+      "tactic": "defense-evasion",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1205",
+      "name": "Traffic Signaling",
+      "tactic": "persistence",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1205",
+      "name": "Traffic Signaling",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1207",
+      "name": "Rogue Domain Controller",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-creation|active-directory-object-modification|network-traffic-content|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1210",
+      "name": "Exploitation of Remote Services",
+      "tactic": "lateral-movement",
+      "context": "application-log-content|network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1211",
+      "name": "Exploitation for Defense Evasion",
+      "tactic": "defense-evasion",
+      "context": "application-log-content|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1212",
+      "name": "Exploitation for Credential Access",
+      "tactic": "credential-access",
+      "context": "application-log-content|process-creation|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1213",
+      "name": "Data from Information Repositories",
+      "tactic": "collection",
+      "context": "application-log-content|logon-session-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1216",
+      "name": "System Script Proxy Execution",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1216.001",
+      "name": "PubPrn",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1217",
+      "name": "Browser Bookmark Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|file-access|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1218",
+      "name": "System Binary Proxy Execution",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|module-load|network-connection-creation|os-api-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1218.007",
+      "name": "Msiexec",
+      "tactic": "defense-evasion",
+      "context": "command-execution|module-load|network-connection-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1218.011",
+      "name": "Rundll32",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-metadata|module-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1218.012",
+      "name": "Verclsid",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1218.013",
+      "name": "Mavinject",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1218.014",
+      "name": "MMC",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1219",
+      "name": "Remote Access Software",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1220",
+      "name": "XSL Script Processing",
+      "tactic": "defense-evasion",
+      "context": "module-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1221",
+      "name": "Template Injection",
+      "tactic": "defense-evasion",
+      "context": "network-connection-creation|network-traffic-content|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system|root",
+      "tid": "T1222",
+      "name": "File and Directory Permissions Modification",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-modification|command-execution|file-metadata|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1480",
+      "name": "Execution Guardrails",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1480.001",
+      "name": "Environmental Keying",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1482",
+      "name": "Domain Trust Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1484",
+      "name": "Domain Policy Modification",
+      "tactic": "defense-evasion",
+      "context": "active-directory-object-creation|active-directory-object-deletion|active-directory-object-modification|command-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1484",
+      "name": "Domain Policy Modification",
+      "tactic": "privilege-escalation",
+      "context": "active-directory-object-creation|active-directory-object-deletion|active-directory-object-modification|command-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|root|system",
+      "tid": "T1485",
+      "name": "Data Destruction",
+      "tactic": "impact",
+      "context": "cloud-storage-deletion|command-execution|file-deletion|file-modification|image-deletion|instance-deletion|process-creation|snapshot-deletion|volume-deletion"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1486",
+      "name": "Data Encrypted for Impact",
+      "tactic": "impact",
+      "context": "cloud-storage-metadata|cloud-storage-modification|command-execution|file-creation|file-modification|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1489",
+      "name": "Service Stop",
+      "tactic": "impact",
+      "context": "command-execution|file-modification|os-api-execution|process-creation|process-termination|service-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1490",
+      "name": "Inhibit System Recovery",
+      "tactic": "impact",
+      "context": "command-execution|file-deletion|process-creation|service-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1491",
+      "name": "Defacement",
+      "tactic": "impact",
+      "context": "application-log-content|file-creation|file-modification|network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1495",
+      "name": "Firmware Corruption",
+      "tactic": "impact",
+      "context": "firmware-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1496",
+      "name": "Resource Hijacking",
+      "tactic": "impact",
+      "context": "command-execution|file-creation|host-status|network-connection-creation|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497",
+      "name": "Virtualization/Sandbox Evasion",
+      "tactic": "defense-evasion",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1497",
+      "name": "Virtualization/Sandbox Evasion",
+      "tactic": "discovery",
+      "context": "command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1498",
+      "name": "Network Denial of Service",
+      "tactic": "impact",
+      "context": "host-status|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1498.001",
+      "name": "Direct Network Flood",
+      "tactic": "impact",
+      "context": "host-status|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1499",
+      "name": "Endpoint Denial of Service",
+      "tactic": "impact",
+      "context": "application-log-content|host-status|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1499.001",
+      "name": "OS Exhaustion Flood",
+      "tactic": "impact",
+      "context": "host-status|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1499.002",
+      "name": "Service Exhaustion Flood",
+      "tactic": "impact",
+      "context": "application-log-content|host-status|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|root",
+      "tid": "T1505",
+      "name": "Server Software Component",
+      "tactic": "persistence",
+      "context": "application-log-content|file-creation|file-modification|network-traffic-content|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1505.005",
+      "name": "Terminal Services DLL",
+      "tactic": "persistence",
+      "context": "command-execution|file-modification|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator",
+      "tid": "T1518",
+      "name": "Software Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|firewall-enumeration|firewall-metadata|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1518.001",
+      "name": "Security Software Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|firewall-enumeration|firewall-metadata|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|root|system",
+      "tid": "T1529",
+      "name": "System Shutdown/Reboot",
+      "tactic": "impact",
+      "context": "command-execution|host-status|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1531",
+      "name": "Account Access Removal",
+      "tactic": "impact",
+      "context": "active-directory-object-modification|user-account-deletion|user-account-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1534",
+      "name": "Internal Spearphishing",
+      "tactic": "lateral-movement",
+      "context": "application-log-content|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1539",
+      "name": "Steal Web Session Cookie",
+      "tactic": "credential-access",
+      "context": "file-access|process-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1542",
+      "name": "Pre-OS Boot",
+      "tactic": "defense-evasion",
+      "context": "command-execution|drive-modification|driver-metadata|firmware-modification|network-connection-creation|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1542",
+      "name": "Pre-OS Boot",
+      "tactic": "persistence",
+      "context": "command-execution|drive-modification|driver-metadata|firmware-modification|network-connection-creation|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1543",
+      "name": "Create or Modify System Process",
+      "tactic": "persistence",
+      "context": "command-execution|driver-load|file-creation|file-modification|os-api-execution|process-creation|service-creation|service-modification|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1543",
+      "name": "Create or Modify System Process",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|driver-load|file-creation|file-modification|os-api-execution|process-creation|service-creation|service-modification|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1543.003",
+      "name": "Windows Service",
+      "tactic": "persistence",
+      "context": "command-execution|driver-load|os-api-execution|process-creation|service-creation|service-modification|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1543.003",
+      "name": "Windows Service",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|driver-load|os-api-execution|process-creation|service-creation|service-modification|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1546",
+      "name": "Event Triggered Execution",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-creation|file-metadata|file-modification|module-load|process-creation|windows-registry-key-modification|wmi-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1546",
+      "name": "Event Triggered Execution",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-metadata|file-modification|module-load|process-creation|windows-registry-key-modification|wmi-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1546.001",
+      "name": "Change Default File Association",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system|user",
+      "tid": "T1546.001",
+      "name": "Change Default File Association",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1546.002",
+      "name": "Screensaver",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-creation|file-modification|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1546.002",
+      "name": "Screensaver",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.003",
+      "name": "Windows Management Instrumentation Event Subscription",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|process-creation|wmi-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.003",
+      "name": "Windows Management Instrumentation Event Subscription",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|wmi-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.007",
+      "name": "Netsh Helper DLL",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|system",
+      "tid": "T1546.007",
+      "name": "Netsh Helper DLL",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|root",
+      "tid": "T1547",
+      "name": "Boot or Logon Autostart Execution",
+      "tactic": "persistence",
+      "context": "command-execution|driver-load|file-creation|file-modification|kernel-module-load|module-load|os-api-execution|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|root",
+      "tid": "T1547",
+      "name": "Boot or Logon Autostart Execution",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|driver-load|file-creation|file-modification|kernel-module-load|module-load|os-api-execution|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1547.001",
+      "name": "Registry Run Keys / Startup Folder",
+      "tactic": "persistence",
+      "context": "command-execution|file-modification|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1547.001",
+      "name": "Registry Run Keys / Startup Folder",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-modification|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1547.002",
+      "name": "Authentication Package",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1547.002",
+      "name": "Authentication Package",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.003",
+      "name": "Time Providers",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.003",
+      "name": "Time Providers",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.004",
+      "name": "Winlogon Helper DLL",
+      "tactic": "persistence",
+      "context": "command-execution|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.004",
+      "name": "Winlogon Helper DLL",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.008",
+      "name": "LSASS Driver",
+      "tactic": "persistence",
+      "context": "driver-load|file-creation|file-modification|module-load"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.008",
+      "name": "LSASS Driver",
+      "tactic": "privilege-escalation",
+      "context": "driver-load|file-creation|file-modification|module-load"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.010",
+      "name": "Port Monitors",
+      "tactic": "persistence",
+      "context": "file-creation|module-load|os-api-execution|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|administrator",
+      "tid": "T1547.010",
+      "name": "Port Monitors",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|module-load|os-api-execution|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1548",
+      "name": "Abuse Elevation Control Mechanism",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-metadata|file-modification|os-api-execution|process-creation|process-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1548",
+      "name": "Abuse Elevation Control Mechanism",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-metadata|file-modification|os-api-execution|process-creation|process-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1548.002",
+      "name": "Bypass User Account Control",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|process-creation|process-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1548.002",
+      "name": "Bypass User Account Control",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|process-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1550",
+      "name": "Use Alternate Authentication Material",
+      "tactic": "defense-evasion",
+      "context": "active-directory-credential-request|application-log-content|logon-session-creation|user-account-authentication|web-credential-usage"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1550",
+      "name": "Use Alternate Authentication Material",
+      "tactic": "lateral-movement",
+      "context": "active-directory-credential-request|application-log-content|logon-session-creation|user-account-authentication|web-credential-usage"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system",
+      "tid": "T1552",
+      "name": "Unsecured Credentials",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access|process-creation|user-account-authentication|windows-registry-key-access"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1553",
+      "name": "Subvert Trust Controls",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-metadata|file-modification|module-load|process-creation|windows-registry-key-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1553.003",
+      "name": "SIP and Trust Provider Hijacking",
+      "tactic": "defense-evasion",
+      "context": "file-modification|module-load|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1553.005",
+      "name": "Mark-of-the-Web Bypass",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1553.006",
+      "name": "Code Signing Policy Modification",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1554",
+      "name": "Compromise Client Software Binary",
+      "tactic": "persistence",
+      "context": "file-creation|file-deletion|file-metadata|file-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator",
+      "tid": "T1555",
+      "name": "Credentials from Password Stores",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access|os-api-execution|process-access|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1555.004",
+      "name": "Windows Credential Manager",
+      "tactic": "credential-access",
+      "context": "command-execution|file-access|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1556",
+      "name": "Modify Authentication Process",
+      "tactic": "credential-access",
+      "context": "file-creation|file-modification|logon-session-creation|module-load|os-api-execution|process-access|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1556",
+      "name": "Modify Authentication Process",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|logon-session-creation|module-load|os-api-execution|process-access|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1556",
+      "name": "Modify Authentication Process",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|logon-session-creation|module-load|os-api-execution|process-access|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1557",
+      "name": "Adversary-in-the-Middle",
+      "tactic": "credential-access",
+      "context": "application-log-content|network-traffic-content|network-traffic-flow|service-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1557",
+      "name": "Adversary-in-the-Middle",
+      "tactic": "collection",
+      "context": "application-log-content|network-traffic-content|network-traffic-flow|service-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1557.003",
+      "name": "DHCP Spoofing",
+      "tactic": "credential-access",
+      "context": "application-log-content|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1557.003",
+      "name": "DHCP Spoofing",
+      "tactic": "collection",
+      "context": "application-log-content|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|root",
+      "tid": "T1558",
+      "name": "Steal or Forge Kerberos Tickets",
+      "tactic": "credential-access",
+      "context": "active-directory-credential-request|command-execution|file-access|logon-session-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user|system",
+      "tid": "T1559",
+      "name": "Inter-Process Communication",
+      "tactic": "execution",
+      "context": "module-load|process-access|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1560",
+      "name": "Archive Collected Data",
+      "tactic": "collection",
+      "context": "command-execution|file-creation|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1560.001",
+      "name": "Archive via Utility",
+      "tactic": "collection",
+      "context": "command-execution|file-creation|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|root|system|administrator",
+      "tid": "T1561",
+      "name": "Disk Wipe",
+      "tactic": "impact",
+      "context": "command-execution|drive-access|drive-modification|driver-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1562",
+      "name": "Impair Defenses",
+      "tactic": "defense-evasion",
+      "context": "cloud-service-disable|cloud-service-modification|command-execution|firewall-disable|firewall-rule-modification|host-status|process-creation|process-termination|script-execution|service-metadata|windows-registry-key-deletion|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1562.003",
+      "name": "Impair Command History Logging",
+      "tactic": "defense-evasion",
+      "context": "command-execution|host-status"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1562.010",
+      "name": "Downgrade Attack",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|process-metadata"
+    },
+    {
+      "platform": "windows",
+      "privs": "system|root",
+      "tid": "T1563",
+      "name": "Remote Service Session Hijacking",
+      "tactic": "lateral-movement",
+      "context": "command-execution|logon-session-creation|network-traffic-content|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1564",
+      "name": "Hide Artifacts",
+      "tactic": "defense-evasion",
+      "context": "application-log-content|command-execution|file-creation|file-metadata|file-modification|firmware-modification|os-api-execution|process-creation|script-execution|service-creation|user-account-creation|user-account-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1564.002",
+      "name": "Hidden Users",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-modification|process-creation|user-account-creation|user-account-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1564.008",
+      "name": "Email Hiding Rules",
+      "tactic": "defense-evasion",
+      "context": "application-log-content|command-execution|file-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1565",
+      "name": "Data Manipulation",
+      "tactic": "impact",
+      "context": "file-creation|file-deletion|file-metadata|file-modification|network-traffic-content|network-traffic-flow|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1565.001",
+      "name": "Stored Data Manipulation",
+      "tactic": "impact",
+      "context": "file-creation|file-deletion|file-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1565.002",
+      "name": "Transmitted Data Manipulation",
+      "tactic": "impact",
+      "context": "network-traffic-content|network-traffic-flow|os-api-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1566",
+      "name": "Phishing",
+      "tactic": "initial-access",
+      "context": "application-log-content|file-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1566.002",
+      "name": "Spearphishing Link",
+      "tactic": "initial-access",
+      "context": "application-log-content|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1567",
+      "name": "Exfiltration Over Web Service",
+      "tactic": "exfiltration",
+      "context": "command-execution|file-access|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1568",
+      "name": "Dynamic Resolution",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "user|administrator|system|root",
+      "tid": "T1569",
+      "name": "System Services",
+      "tactic": "execution",
+      "context": "command-execution|file-modification|process-creation|service-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1570",
+      "name": "Lateral Tool Transfer",
+      "tactic": "lateral-movement",
+      "context": "command-execution|file-creation|file-metadata|named-pipe-metadata|network-share-access|network-traffic-content|network-traffic-flow|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1571",
+      "name": "Non-Standard Port",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1572",
+      "name": "Protocol Tunneling",
+      "tactic": "command-and-control",
+      "context": "network-connection-creation|network-traffic-content|network-traffic-flow"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1573",
+      "name": "Encrypted Channel",
+      "tactic": "command-and-control",
+      "context": "network-traffic-content"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574",
+      "name": "Hijack Execution Flow",
+      "tactic": "persistence",
+      "context": "command-execution|file-creation|file-modification|module-load|process-creation|service-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574",
+      "name": "Hijack Execution Flow",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|file-creation|file-modification|module-load|process-creation|service-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574",
+      "name": "Hijack Execution Flow",
+      "tactic": "defense-evasion",
+      "context": "command-execution|file-creation|file-modification|module-load|process-creation|service-metadata|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.002",
+      "name": "DLL Side-Loading",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|module-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.002",
+      "name": "DLL Side-Loading",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|module-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.002",
+      "name": "DLL Side-Loading",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|module-load|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.007",
+      "name": "Path Interception by PATH Environment Variable",
+      "tactic": "persistence",
+      "context": "file-creation|file-modification|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.007",
+      "name": "Path Interception by PATH Environment Variable",
+      "tactic": "privilege-escalation",
+      "context": "file-creation|file-modification|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1574.007",
+      "name": "Path Interception by PATH Environment Variable",
+      "tactic": "defense-evasion",
+      "context": "file-creation|file-modification|process-creation|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.011",
+      "name": "Services Registry Permissions Weakness",
+      "tactic": "persistence",
+      "context": "command-execution|process-creation|service-modification|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.011",
+      "name": "Services Registry Permissions Weakness",
+      "tactic": "privilege-escalation",
+      "context": "command-execution|process-creation|service-modification|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user",
+      "tid": "T1574.011",
+      "name": "Services Registry Permissions Weakness",
+      "tactic": "defense-evasion",
+      "context": "command-execution|process-creation|service-modification|windows-registry-key-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1606",
+      "name": "Forge Web Credentials",
+      "tactic": "credential-access",
+      "context": "logon-session-creation|web-credential-creation|web-credential-usage"
+    },
+    {
+      "platform": "windows",
+      "privs": "administrator|user|root",
+      "tid": "T1611",
+      "name": "Escape to Host",
+      "tactic": "privilege-escalation",
+      "context": "container-creation|os-api-execution|process-creation|volume-modification"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1614",
+      "name": "System Location Discovery",
+      "tactic": "discovery",
+      "context": "command-execution|instance-metadata|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "user",
+      "tid": "T1615",
+      "name": "Group Policy Discovery",
+      "tactic": "discovery",
+      "context": "active-directory-object-access|command-execution|network-traffic-content|process-creation|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1620",
+      "name": "Reflective Code Loading",
+      "tactic": "defense-evasion",
+      "context": "module-load|os-api-execution|script-execution"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1621",
+      "name": "Multi-Factor Authentication Request Generation",
+      "tactic": "credential-access",
+      "context": "application-log-content|logon-session-creation|logon-session-metadata|user-account-authentication"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1622",
+      "name": "Debugger Evasion",
+      "tactic": "defense-evasion",
+      "context": "application-log-content|command-execution|os-api-execution|process-creation"
+    },
+    {
+      "platform": "windows",
+      "privs": "none",
+      "tid": "T1622",
+      "name": "Debugger Evasion",
+      "tactic": "discovery",
+      "context": "application-log-content|command-execution|os-api-execution|process-creation"
+    }
+]
