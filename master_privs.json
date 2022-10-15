@@ -1,3 +1,5 @@
+{
+    "techniques":
 [
     {
       "platform": "windows",
@@ -4242,3 +4244,4 @@
       "context": "application-log-content|command-execution|os-api-execution|process-creation"
     }
 ]
+}
